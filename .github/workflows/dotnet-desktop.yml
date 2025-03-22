@@ -16,7 +16,7 @@ jobs:
 
     env:
       Solution_Name: OneDriver.Framework.sln
-      #Test_Project_Path: 
+      Test_Project_Path: OneDriver.Framework.UnitTest.sln
       
     steps:
     - name: Checkout
