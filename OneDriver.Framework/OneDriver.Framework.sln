@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneDriver.Framework", "OneDriver.Framework\OneDriver.Framework.csproj", "{5C3E8298-9D4E-4438-9BF2-946C2FAC7B6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C3E8298-9D4E-4438-9BF2-946C2FAC7B6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C3E8298-9D4E-4438-9BF2-946C2FAC7B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C3E8298-9D4E-4438-9BF2-946C2FAC7B6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C3E8298-9D4E-4438-9BF2-946C2FAC7B6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE2A1FF7-625F-4E4D-8FFF-72E13FD16899}
+	EndGlobalSection
+EndGlobal
