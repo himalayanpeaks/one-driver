@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35806.99 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneDriver.Framework", "OneDriver.Framework\OneDriver.Framework.csproj", "{5C3E8298-9D4E-4438-9BF2-946C2FAC7B6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneDriver.Framework.UnitTest", "OneDriver.Framework.UnitTest\OneDriver.Framework.UnitTest.csproj", "{8A06D4FA-EBF6-4774-BF55-BAA8CA725813}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5C3E8298-9D4E-4438-9BF2-946C2FAC7B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C3E8298-9D4E-4438-9BF2-946C2FAC7B6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C3E8298-9D4E-4438-9BF2-946C2FAC7B6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A06D4FA-EBF6-4774-BF55-BAA8CA725813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A06D4FA-EBF6-4774-BF55-BAA8CA725813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A06D4FA-EBF6-4774-BF55-BAA8CA725813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A06D4FA-EBF6-4774-BF55-BAA8CA725813}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
