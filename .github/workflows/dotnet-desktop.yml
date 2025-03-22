@@ -77,24 +77,25 @@ jobs:
           }
           echo "PackageVersion=$ver" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
           Write-Host "Determined version: $ver"
-
-          - name: Pack NuGet Package
-          run: |
-            dotnet pack $env:Solution_Name `
-                   --configuration Release `
-                   --output ./packages `
-                   /p:PackageVersion=${{ steps.version.outputs.PackageVersion }}
         
-          - name: Debug - Verify Packages Exist
-            run: dir ./packages/
-          
-          - name: Publish NuGet Package
-            if: startsWith(github.ref, 'refs/tags/')
-            run: |
-              dotnet nuget push ${{ github.workspace }}/packages/*.nupkg `
-                --source https://api.nuget.org/v3/index.json `
-                --api-key ${{ secrets.NUGET_API_KEY }} `
-                --skip-duplicate
+      - name: Pack NuGet Package
+        run: |
+            dotnet pack $env:Solution_Name `
+              --configuration Release `
+              --output ./packages `
+              /p:PackageVersion=${{ steps.version.outputs.PackageVersion }}
+        
+      - name: Debug - Verify Packages Exist
+        run: dir ./packages/
+        
+      - name: Publish NuGet Package
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+            dotnet nuget push ${{ github.workspace }}/packages/*.nupkg `
+              --source https://api.nuget.org/v3/index.json `
+              --api-key ${{ secrets.NUGET_API_KEY }} `
+              --skip-duplicate
+        
         
 
       - name: Upload NuGet Artifact (for non-tagged builds)
