@@ -91,11 +91,11 @@ jobs:
       - name: Publish NuGet Package
         if: startsWith(github.ref, 'refs/tags/')
         run: |
-            dotnet nuget push ${{ github.workspace }}/packages/*.nupkg `
-              --source https://api.nuget.org/v3/index.json `
-              --api-key ${{ secrets.NUGET_API_KEY }} `
-              --skip-duplicate
-        
+          dotnet nuget push ".\packages\*.nupkg" `
+            --source https://api.nuget.org/v3/index.json `
+            --api-key ${{ secrets.NUGET_API_KEY }} `
+            --skip-duplicate
+      
         
 
       - name: Upload NuGet Artifact (for non-tagged builds)
