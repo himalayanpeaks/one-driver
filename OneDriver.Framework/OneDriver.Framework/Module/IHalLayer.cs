@@ -3,7 +3,7 @@ using OneDriver.Framework.Libs.Validator;
 
 namespace OneDriver.Framework.Module
 {
-    public interface IDeviceHAL<TInternalDataHAL> where TInternalDataHAL : BaseDataForAnnouncement, new()
+    public interface IHalLayer<TInternalDataHAL> where TInternalDataHAL : BaseDataForAnnouncement, new()
     {
         public delegate void ProcessDataAnnouncer(TInternalDataHAL dataHAL);
         ConnectionError Open(string initString, IValidator validator);
