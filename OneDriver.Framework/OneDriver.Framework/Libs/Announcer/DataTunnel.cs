@@ -10,13 +10,14 @@
         private TEventArgs? PreviousData { get; set; }
         private void Announcer()
         {
+            TEventArgs newData = new TEventArgs();
+            TEventArgs PreviousData = new TEventArgs();
             while (AnnouncerCancellationToken.IsCancellationRequested == false)
             {
-                FetchDataForTunnel(out var newData);
+                FetchDataForTunnel(ref newData);
                 if (!newData.Equals(PreviousData))
                 {
                     DataEvent?.Invoke(this, newData);
-                    PreviousData = new TEventArgs();
                     PreviousData = newData;
                 }
             }
@@ -42,6 +43,6 @@
         {
             if (DataTask.Status == TaskStatus.Running) AnnouncerCancellationTokenSource.Cancel();
         }
-        protected abstract void FetchDataForTunnel(out TEventArgs data);
+        protected abstract void FetchDataForTunnel(ref TEventArgs data);
     }
 }
